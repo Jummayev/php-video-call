@@ -1,0 +1,308 @@
+@font-face {
+    font-family: 'Roboto';
+    src: url("Roboto-Regular.ttf");
+}
+
+* {
+    box-sizing: border-box;
+}
+
+html, body {
+    margin: 0;
+    padding: 0;
+    height: 100%;
+}
+
+.sigInContainer {
+    height: 100vh;
+    background-color: #efefef;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+}
+
+.column {
+    background-color: #fff;
+    min-height: 300px;
+    max-height: 100%;
+    width: 450px;
+    box-shadow: rgba(0, 0, 0, 0.1) 0 1px 2px;
+    padding: 20px 35px;
+}
+
+.column form {
+    display: flex;
+    flex-direction: column;
+}
+
+.column form input[type="text"],
+.column form input[type="email"],
+.column form input[type="password"] {
+    font-size: 14px;
+    border: none;
+    border-bottom: 1px solid #dedede;
+    outline: none;
+    padding: 10px;
+    margin: 10px 0;
+}
+
+.column form input[type="submit"] {
+    border: none;
+    color: #fff;
+    background-color: #0159ea;
+    font-size: 16px;
+    height: 36px;
+    width: 88px;
+    border-radius: 3px;
+    margin-top: 10px;
+    margin-bottom: 20px;
+    font-weight: 500;
+    cursor: pointer;
+}
+
+.column form input[type="[submit]"]:hover {
+    background-color: #042253;
+}
+
+.column section.header {
+    padding: 20px 0;
+
+}
+
+.column .header h3 {
+    font-size: 24px;
+    color: #000;
+    margin-bottom: 5px;
+    padding-top: 2px;
+    line-height: 20px;
+}
+
+.column .header span {
+    color: #333;
+    font-size: 14px;
+}
+
+.logInMessage {
+    text-decoration: none;
+    color: #333;
+    font-size: 14px;
+    font-weight: 400;
+}
+
+.logInMessage:hover {
+    text-decoration: underline;
+}
+
+.g-header {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    padding: 10px 100px;
+    background-color: rgba(210, 210 , 210, 0.5);
+}
+
+.g-header .g-header-right {
+    display: flex;
+    align-items: center;
+    background-color: #0159ea;
+    padding: 8px 12px;
+    border-radius: 8px;
+    color: #fff;
+}
+
+.g-header .g-header-right .user-wrapper {
+    width: 50px;
+    height: 50px;
+    margin-left: 5px;
+}
+
+.g-header .g-header-right .user-wrapper img {
+    width: 100%;
+    height: 100%;
+    border-radius: 50%;
+}
+.log-out-status{
+    text-decoration: none;
+    font-size: 14px;
+    font-weight: 500;
+    padding: 0 0 0 10px;
+    color: darkred;
+}
+
+.user-status{
+    border-radius: 3px;
+    background-color: #042253;
+}
+
+.online {
+    background-color: green;
+}
+
+.log-out-status{
+    background-color: #a22a21;
+    color: #fff;
+    font-size: 24px;
+}
+.page-container{
+    display: grid;
+    grid-template-columns: 350px 1fr;
+    margin-top: 49px;
+    margin-left: 25px;
+    margin-right: 35px;
+    gap: 60px;
+}
+
+.page-container aside {
+    height: 500px;
+    -moz-box-shadow: 1px 1px 4px -1px;
+    overflow-y: auto;
+}
+
+.page-container .main-content {
+    height: 500px;
+    -moz-box-shadow: 1px 1px 4px -1px;
+    background-color: #000000;
+    color: #fff;
+}
+.page-container-top-aside{
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+}
+.custom-style svg{
+    width: 40px;
+    height: 40px;
+    fill: #008066;
+}
+.custom-style{
+    position: relative;flex-direction: column;
+    align-items: center;
+    flex: 1;
+    cursor: pointer;
+    padding: 6px;
+}
+.active {
+    background-color: #ddd;
+    border-bottom: 2px solid #333;
+}
+.user-connection{
+    display: flex;
+    align-items: center;
+    justify-content: space-between;padding: 2px 10px;
+    border: solid 1px #d2d2d2;
+    cursor: pointer;
+    /*margin-bottom: 2px;*/
+}
+.user-connection:hover{
+    background-color: #ddd;
+}
+.u-connection-name{
+    font-size: 18px;
+    padding: 15px 0;
+}
+.u-icons{
+    display: flex;
+    align-items: center;
+    justify-content: center;
+}
+.cam-icon-connection{
+    fill: #05c5ff;
+    margin-right: 17px;
+}
+.audio-icon{
+    color: #05c5ff;
+    font-size: 20px;
+}
+.webcam-img img{
+    height: 150px;
+    width: 50px;
+}
+.webcam-container{
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    justify-content: center;
+    margin-top: 30px;
+}
+.activeClass{
+    border-right: 2px solid red;
+}
+.user-connected-img img{
+    width: 150px;
+    height: 150px;
+    border-radius: 50%;
+}
+.call-wrap{
+    position: relative;
+    display: block;
+    height: 100%;
+}
+#local-video{
+    z-index: 2;
+    width: 200px;
+    height: 200px;
+    position: absolute;
+    top: 15px;
+    right: 15px;
+}
+video{
+    background-color: #000;
+    border: 1px solid gray;
+}
+.remote-video-wrap{
+    position: relative;
+    z-index: 2;
+}
+.call-hang-status{
+    position: absolute;
+    z-index: 999;
+    height: 100%;
+    width: 100%;
+}
+.calling-status-wrap{
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    justify-content: center;
+    height: 100%;
+}
+.calling-action{
+    display: flex;
+}
+.video-call .cam-icon{
+    cursor: pointer;
+    margin-left: 5px;
+    margin-right: 15px;
+    background-color: #00806e;
+    fill: #fff;
+    width: 40px;
+    height: 44px;
+    padding: 7px;
+    border-radius: 50%;
+}
+.audio-call .audio-icon-top{
+    cursor: pointer;
+    background-color: #00806e;
+    fill: #fff;
+    font-size: 30px;
+    padding: 7px;
+    border-radius: 50%;
+}
+.user-status-text {
+    display: flex;
+    align-items: center;
+    letter-spacing: 2px;
+}
+#remote-video{
+    height: 500px;
+    width: 884px;
+}
+.user-calling-status{
+    padding: 15px 0;
+    font-size: 18px;
+}
+.user-connected-name{
+    margin-left: 5px;
+    padding: 15px 0;
+
+}
